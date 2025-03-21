@@ -21,32 +21,12 @@ Twixel is a **Twitter-like web application** built using **Django** where users 
 - **Authentication:** Django's built-in auth system
 - **Deployment:** (To be added - AWS/Heroku/Render)
 
-## 📂 Project Structure
-
-```
-Twixel/
-│-- twixel/              # Main Django app
-│   │-- templates/       # HTML templates
-│   │   │-- layout.html  # Base layout
-│   │   │-- content.html # Tweet list & detail template
-│   │   │-- highlights.html # Featured tweets
-│   │   │-- profile_mini.html # User profile sidebar
-│   │   │-- tweet_list.html # Home page
-│   │   │-- tweet_detail.html # Single tweet page
-│   │-- models.py        # Database models (Tweet, User)
-│   │-- views.py         # Handles logic for tweets & highlights
-│   │-- urls.py          # URL routing
-│-- static/              # CSS, JS, Images
-│-- db.sqlite3           # Database (if using SQLite)
-│-- manage.py            # Django CLI
-```
-
 ## 🛠 Installation & Setup
 
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/Twixel.git
+git clone https://github.com/Horizon-1803/Twixel.git
 cd Twixel
 ```
 
