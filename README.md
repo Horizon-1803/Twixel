@@ -1,37 +1,29 @@
-Twixel - A Twitter-Like Platform
+# Twixel - A Twitter-Like Platform
 
-🚀 Overview
+## 🚀 Overview
 
-Twixel is a Twitter-like web application built using Django where users can post tweets (text and images), interact with highlights, and explore trending content. The project follows Django's DRY principle, ensuring modular and reusable templates.
+Twixel is a **Twitter-like web application** built using **Django** where users can **post tweets** (text and images), **interact with highlights**, and **explore trending content**. The project follows **Django's DRY principle**, ensuring modular and reusable templates.
 
-✨ Features
+## ✨ Features
 
-User Authentication (Register/Login/Logout)
+- **User Authentication** (Register/Login/Logout)
+- **Create, Edit & Delete Tweets**
+- **Highlights Section** (Featured tweets on the right side)
+- **Search Functionality** (Filter tweets by keyword)
+- **Responsive UI with Bootstrap**
+- **Profile Mini Section** (User details on the left sidebar)
+- **Tweet Detail View** (Open tweets in a separate page)
 
-Create, Edit & Delete Tweets
+## 🛠 Tech Stack
 
-Highlights Section (Featured tweets on the right side)
+- **Backend:** Django, SQLite/PostgreSQL
+- **Frontend:** Bootstrap, HTML, CSS
+- **Authentication:** Django's built-in auth system
+- **Deployment:** (To be added - AWS/Heroku/Render)
 
-Search Functionality (Filter tweets by keyword)
+## 📂 Project Structure
 
-Responsive UI with Bootstrap
-
-Profile Mini Section (User details on the left sidebar)
-
-Tweet Detail View (Open tweets in a separate page)
-
-🛠 Tech Stack
-
-Backend: Django, SQLite/PostgreSQL
-
-Frontend: Bootstrap, HTML, CSS
-
-Authentication: Django's built-in auth system
-
-Deployment: (To be added - AWS/Heroku/Render)
-
-📂 Project Structure
-
+```
 Twixel/
 │-- twixel/              # Main Django app
 │   │-- templates/       # HTML templates
@@ -47,134 +39,50 @@ Twixel/
 │-- static/              # CSS, JS, Images
 │-- db.sqlite3           # Database (if using SQLite)
 │-- manage.py            # Django CLI
+```
 
-🛠 Installation & Setup
+## 🛠 Installation & Setup
 
-1️⃣ Clone the Repository
+### 1️⃣ Clone the Repository
 
+```bash
 git clone https://github.com/yourusername/Twixel.git
 cd Twixel
+```
 
-2️⃣ Create a Virtual Environment & Install Dependencies
+### 2️⃣ Create a Virtual Environment & Install Dependencies
 
+```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
+```
 
-3️⃣ Apply Migrations & Run Server
+### 3️⃣ Apply Migrations & Run Server
 
+```bash
 python manage.py migrate
 python manage.py runserver
+```
 
-Now, open http://127.0.0.1:8000/ in your browser. 🚀
+Now, open **[http://127.0.0.1:8000/](http://127.0.0.1:8000/)** in your browser. 🚀
 
-📌 Future Improvements
+## 📌 Future Improvements
 
-✅ Like & Comment System
+- ✅ **Like & Comment System**
+- ✅ **Follow/Unfollow System**
+- ✅ **Real-time Notifications (WebSockets)**
+- ✅ **Mobile App (React Native/Flutter)**
 
-✅ Follow/Unfollow System
+## 👨‍💻 Contributing
 
-✅ Real-time Notifications (WebSockets)
+Pull requests are welcome! Feel free to **fork** the repo and submit PRs. 🙌
 
-✅ Mobile App (React Native/Flutter)
+## 📜 License
 
-👨‍💻 Contributing
+This project is **MIT Licensed**. Feel free to use and modify it!
 
-Pull requests are welcome! Feel free to fork the repo and submit PRs. 🙌
+---
 
-📜 License
-
-This project is MIT Licensed. Feel free to use and modify it!
-
-💡 Let's build the future of social media, one tweet at a time! 🐦🚀
-
-Twixel - A Twitter-Like Platform
-
-🚀 Overview
-
-Twixel is a Twitter-like web application built using Django where users can post tweets (text and images), interact with highlights, and explore trending content. The project follows Django's DRY principle, ensuring modular and reusable templates.
-
-✨ Features
-
-User Authentication (Register/Login/Logout)
-
-Create, Edit & Delete Tweets
-
-Highlights Section (Featured tweets on the right side)
-
-Search Functionality (Filter tweets by keyword)
-
-Responsive UI with Bootstrap
-
-Profile Mini Section (User details on the left sidebar)
-
-Tweet Detail View (Open tweets in a separate page)
-
-🛠 Tech Stack
-
-Backend: Django, SQLite/PostgreSQL
-
-Frontend: Bootstrap, HTML, CSS
-
-Authentication: Django's built-in auth system
-
-Deployment: (To be added - AWS/Heroku/Render)
-
-📂 Project Structure
-
-Twixel/
-│-- twixel/              # Main Django app
-│   │-- templates/       # HTML templates
-│   │   │-- layout.html  # Base layout
-│   │   │-- content.html # Tweet list & detail template
-│   │   │-- highlights.html # Featured tweets
-│   │   │-- profile_mini.html # User profile sidebar
-│   │   │-- tweet_list.html # Home page
-│   │   │-- tweet_detail.html # Single tweet page
-│   │-- models.py        # Database models (Tweet, User)
-│   │-- views.py         # Handles logic for tweets & highlights
-│   │-- urls.py          # URL routing
-│-- static/              # CSS, JS, Images
-│-- db.sqlite3           # Database (if using SQLite)
-│-- manage.py            # Django CLI
-
-🛠 Installation & Setup
-
-1️⃣ Clone the Repository
-
-git clone https://github.com/yourusername/Twixel.git
-cd Twixel
-
-2️⃣ Create a Virtual Environment & Install Dependencies
-
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-pip install -r requirements.txt
-
-3️⃣ Apply Migrations & Run Server
-
-python manage.py migrate
-python manage.py runserver
-
-Now, open http://127.0.0.1:8000/ in your browser. 🚀
-
-📌 Future Improvements
-
-✅ Like & Comment System
-
-✅ Follow/Unfollow System
-
-✅ Real-time Notifications (WebSockets)
-
-✅ Mobile App (React Native/Flutter)
-
-👨‍💻 Contributing
-
-Pull requests are welcome! Feel free to fork the repo and submit PRs. 🙌
-
-📜 License
-
-This project is MIT Licensed. Feel free to use and modify it!
-
-💡 Let's build the future of social media, one tweet at a time! 🐦🚀
+💡 **Let's build the future of social media, one tweet at a time!** 🐦🚀
 
