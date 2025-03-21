@@ -1,0 +1,8 @@
+{% extends "tweet_list.html" %}
+
+{% block title %}Tweet by {{ tweet.user.username }}{% endblock %}
+
+{% block main_content %}
+    {% include 'content.html' with tweet=tweet %}
+    
+{% endblock %}

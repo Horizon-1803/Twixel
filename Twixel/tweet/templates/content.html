@@ -1,0 +1,39 @@
+<h2>New Tweets</h2>
+<a class="btn btn-primary mb-4" href="{% url 'tweet_create' %}">Create a tweet</a>
+
+{% if query %}
+    <h3>Search result for "{{ query }}"</h3>
+{% endif %}
+
+<div class="container row gap-3">
+    {% if tweet %}  {# If a single tweet is passed, show it #}
+        <div class="card">
+            {% if tweet.photo %}
+                <img src="{{ tweet.photo.url }}" class="card-img-top" alt="Tweet Image">
+            {% endif %}
+            <div class="card-body">
+                <h5 class="card-title">{{ tweet.user.username }}</h5>
+                <p class="card-text">{{ tweet.text }}</p>
+            </div>
+            <a href="{% url 'tweet_list' %}" class="btn btn-secondary mt-3">Back to Home</a>
+        </div>
+    {% else %}  {# Otherwise, show all tweets #}
+        {% for tweet in tweets %}
+            <div class="card">
+                {% if tweet.photo %}
+                    <img src="{{ tweet.photo.url }}" class="card-img-top" alt="Tweet Image">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">{{ tweet.user.username }}</h5>
+                    <p class="card-text">{{ tweet.text }}</p>
+                    {% if tweet.user == user %}
+                        <a href="{% url 'tweet_edit' tweet.id %}" class="btn btn-primary">Edit</a>
+                        <a href="{% url 'tweet_delete' tweet.id %}" class="btn btn-danger">Delete</a>
+                    {% endif %}
+                </div>
+            </div>
+        {% empty %}
+            <p>No tweets found</p>
+        {% endfor %}
+    {% endif %}
+</div>

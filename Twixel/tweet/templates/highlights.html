@@ -1,0 +1,13 @@
+<h2>Highlights</h2>
+<div class="container row gap-3">
+    {% for highlight in highlighted_tweets %}
+    <div class="card">
+        <div class="card-body">
+            <a href="{% url 'tweet_detail' highlight.id %}">
+                <p class="card-text">{{ highlight.text|slice:":50" }}...</p>
+            </a>
+            <h6 class="card-title">post by - {{ highlight.user.username }}</h6>
+        </div>
+    </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}Twixel | Home{% endblock %}
+
+{% block content %}
+<h1 class="text-center mt-4">Share Your Thoughts with the World</h1>
+
+<div class="container-fluid">
+  <div class="row">
+    {% if user.is_authenticated %}
+      <div class="col-3 border p-3">
+          {% include 'profile_mini.html' %}
+      </div>
+      <div class="col-6 p-3">
+          {% include 'content.html' %}
+      </div>
+      <div class="col-3 border p-3">
+          {% include 'highlights.html' %}
+      </div>
+    {% else %}
+      <div class="col-8 offset-1 p-3">
+          {% include 'content.html' %}
+      </div>
+      <div class="col-3 border p-3">
+          <h3>Haven't Signed in?</h3>
+          <a class="btn btn-primary mb-4" href="{% url 'login' %}">Login</a>
+          <a class="btn btn-primary mb-4" href="{% url 'register' %}">Register</a>
+          {% include 'highlights.html' %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
